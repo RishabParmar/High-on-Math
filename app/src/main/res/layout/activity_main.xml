@@ -6,13 +6,146 @@
     android:layout_height="match_parent"
     tools:context="com.example.parma.highonmath.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/startTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="260dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="259dp"
+        android:onClick="commenceTest"
+        android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_marginTop="88dp"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="88dp"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/expression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="206dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="180dp"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/optionsGrid"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="121dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421">
+
+        <Button
+            android:id="@+id/option1"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@color/option1"
+            android:onClick="clickOption"
+            android:text="10"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/option2"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@color/option2"
+            android:onClick="clickOption"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/option3"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@color/option3"
+            android:onClick="clickOption"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/option4"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@color/option4"
+            android:onClick="clickOption"
+            android:textColor="@color/colorPrimaryDark" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/testAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="173dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="151dp"
+        android:onClick="testAgain"
+        android:text="Test Again?"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/resultImage"
+        android:layout_width="41dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginStart="185dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/wrong" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/finalicon" />
 
 </android.support.constraint.ConstraintLayout>
