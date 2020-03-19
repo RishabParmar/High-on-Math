@@ -14,6 +14,7 @@
         android:layout_marginEnd="148dp"
         android:layout_marginStart="148dp"
         android:layout_marginTop="259dp"
+        android:fontFamily="@font/coming_soon"
         android:onClick="commenceTest"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="206dp"
         android:layout_marginStart="205dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="188dp"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,6 +119,7 @@
         android:layout_marginBottom="173dp"
         android:layout_marginEnd="150dp"
         android:layout_marginStart="151dp"
+        android:fontFamily="@font/coming_soon"
         android:onClick="testAgain"
         android:text="Test Again?"
         android:visibility="gone"
@@ -147,5 +149,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/finalicon" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginStart="87dp"
+        android:fontFamily="@font/coming_soon"
+        android:text="High On Math!"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

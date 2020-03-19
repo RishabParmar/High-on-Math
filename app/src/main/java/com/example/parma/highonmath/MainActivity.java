@@ -12,6 +12,8 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -79,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
         else if(operator.equals("-")) { expressionAnswer = num1 - num2; }
         String expressionText = "Q.)  " + String.valueOf(num1) + " " + operator + " " + String.valueOf(num2);
         expression.setText(expressionText);
+        expression.setScaleX(0f);
+        expression.setScaleY(0f);
+        expression.animate().scaleX(1f).scaleY(1f).setDuration(300).start();
 
         // Creating random answers to be bound to the random options
         String randomAnswers[] = new String[5];
@@ -153,10 +158,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Making the test UI visible
         timer.setVisibility(View.VISIBLE);
+        timer.setY(-900f);
+        timer.animate().translationY(0f).setDuration(500).start();
         scoreCard.setVisibility(View.VISIBLE);
         scoreCard.setText("0/0");
+        scoreCard.setY(-900f);
+        scoreCard.animate().translationY(0f).setDuration(500).start();
         expression.setVisibility(View.VISIBLE);
         optionsGrid.setVisibility(View.VISIBLE);
+        optionsGrid.setScaleX(0f);
+        optionsGrid.setScaleY(0f);
+        optionsGrid.animate().scaleX(1f).scaleY(1f).setDuration(500).start();
         startTestTimer();
 
         // Start the test by providing the question and the options
@@ -176,6 +188,11 @@ public class MainActivity extends AppCompatActivity {
             // in an array of option buttons
             options[i] = findViewById(getResources().getIdentifier("option"+String.valueOf(i), "id", getPackageName()));
         }
+
+        // Animating the app title
+        TextView appTitle = findViewById(R.id.appTitle);
+        appTitle.setY(500f);
+        appTitle.animate().translationY(0f).setDuration(500).start();
     }
 
     @Override
